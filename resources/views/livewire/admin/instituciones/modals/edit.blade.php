@@ -9,23 +9,14 @@
                 <div class="row mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" wire:model='nombre' />
-                    @error('nombre')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
                 </div>
                 <div class="row mb-3">
                     <label for="ubicacion" class="form-label">Ubicación</label>
                     <input type="text" class="form-control" wire:model='ubicacion' />
-                    @error('ubicacion')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
                 </div>
                 <div class="row mb-3">
                     <label for="descripcion" class="form-label">Descripción</label>
                     <textarea class="form-control" wire:model='descripcion'></textarea>
-                    @error('descripcion')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
                 </div>
             </div>
             <div class="modal-footer">

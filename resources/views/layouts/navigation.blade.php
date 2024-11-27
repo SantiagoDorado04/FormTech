@@ -38,17 +38,17 @@
             </ul>
         </li>
 
-        <li class="menu-item {{ request()->routeIs('instituciones') ? 'active' : '' }}">
-            <a href="{{ route('instituciones') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bxs-chalkboard"></i>
-                <div data-i18n="Analytics">Gestion de instituciones</div>
-            </a>
-        </li>
-
         <li class="menu-item {{ request()->routeIs('docentes') ? 'active' : '' }}">
             <a href="{{ route('docentes') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-chalkboard"></i>
                 <div data-i18n="Analytics">Gestion de docentes</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ request()->routeIs('instituciones') ? 'active' : '' }}">
+            <a href="{{ route('instituciones') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-chalkboard"></i>
+                <div data-i18n="Analytics">Gestion de instituciones</div>
             </a>
         </li>
 

@@ -117,9 +117,6 @@
             $('#show-modal').modal('hide');
         });
     </script>
-
-
-
 </body>
 
 </html>
