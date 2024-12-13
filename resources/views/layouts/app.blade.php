@@ -109,6 +109,16 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/js/dashboards-analytics.js') }}"></script>
 
+    <script type="text/javascript">
+        Livewire.on('close-modal', () => {
+            $('#create-modal').modal('hide');
+            $('#edit-modal').modal('hide');
+            $('#delete-modal').modal('hide');
+            $('#info-modal').modal('hide');
+            $('#show-modal').modal('hide');
+        });
+    </script>
+
 
 
 </body>

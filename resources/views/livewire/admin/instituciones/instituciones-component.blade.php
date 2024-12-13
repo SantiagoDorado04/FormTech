@@ -1,15 +1,15 @@
 <div>
 
-    @include('livewire.admin.docentes.modals.create')
-    {{-- @include('livewire.admin.docentes.modals.edit')
-    @include('livewire.admin.docentes.modals.show')
-    @include('livewire.admin.docentes.modals.delete') --}}
+    @include('livewire.admin.instituciones.modals.create')
+    @include('livewire.admin.instituciones.modals.edit')
+    @include('livewire.admin.instituciones.modals.show')
+    @include('livewire.admin.instituciones.modals.delete')
 
     @section('breadcrumb')
-        <span class="text-muted fw-light">Docentes /</span> Listado de docente
+        <span class="text-muted fw-light">Instituciones /</span> Listado de instituciones
     @endsection
 
-    @section('title', 'docentes | FormTech')
+    @section('title', 'instituciones | FormTech')
 
 
     <div class="row">
@@ -26,29 +26,27 @@
                     <table class=" table table-stripped">
                         <thead>
                             <tr>
-                                <th>Identificacion</th>
                                 <th>Nombre</th>
-                                <th>Area</th>
-                                <th>Institucion</th>
+                                <th>Ubicacion</th>
+                                <th>Descripcion</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($docentes as $docente)
+                            @foreach ($instituciones as $institucion)
                                 <tr>
-                                    <td>{{ $docente->identificacion }}</td>
-                                    <td>{{ $docente->nombre }}</td>
-                                    <td>{{ $docente->area }}</td>
-                                    <td>{{ $docente->institucion->nombre }}</td>
+                                    <td>{{ $institucion->nombre }}</td>
+                                    <td>{{ $institucion->ubicacion }}</td>
+                                    <td>{{ $institucion->descripcion }}</td>
                                     <td>
                                         <button class="btn btn-info btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#show-modal"
-                                            wire:click='show({{ $docente->id }})'>Ver</button>
+                                            wire:click='show({{ $institucion->id }})'>Ver</button>
                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#edit-modal"
-                                            wire:click='edit({{ $docente->id }})'>Editar</button>
+                                            wire:click='edit({{ $institucion->id }})'>Editar</button>
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#delete-modal"
-                                            wire:click='delete({{ $docente->id }})'>Eliminar</button>
+                                            wire:click='delete({{ $institucion->id }})'>Eliminar</button>
                                     </td>
                                 </tr>
                             @endforeach

@@ -172,7 +172,7 @@
         <div>
             @if (Route::has('login'))
                 @auth
-                    <a href="{{ route('/dashboard') }}" class="button button-primary">Comenzar Ahora</a>
+                    <a href="{{ route('dashboard') }}" class="button button-primary">Comenzar Ahora</a>
                 @else
                     <a href="{{ route('login') }}" class="button button-primary">Comenzar Ahora</a>
                 @endauth
