@@ -2,20 +2,10 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel3">Crear docente</h5>
+                <h5 class="modal-title" id="exampleModalLabel3">Crear institucion</h5>
                 <button type="button" class="btn-close" wire:click='cancel()'></button>
             </div>
             <div class="modal-body">
-
-                <div class="row">
-                    <div class="col mb-3">
-                        <label for="nameLarge" class="form-label">Identificacion</label>
-                        <input type="text" class="form-control" wire:model='identificacion' />
-                    </div>
-                    @error('identificacion')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
-                </div>
                 <div class="row">
                     <div class="col mb-3">
                         <label for="nameLarge" class="form-label">Nombre</label>
@@ -27,27 +17,23 @@
                 </div>
                 <div class="row">
                     <div class="col mb-3">
-                        <label for="nameLarge" class="form-label">Area</label>
-                        <textarea class="form-control" wire:model='area' rose='10' placeholder="Escribir la descripcion de la area...">
-                        </textarea>
+                        <label for="nameLarge" class="form-label">Ubicacion</label>
+                        <input type="text" class="form-control" wire:model='ubicacion' />
                     </div>
-                    @error('area')
+                    @error('ubicacion')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>
                 <div class="row">
                     <div class="col mb-3">
-                        <label for="nameLarge" class="form-label">Institucion</label>
-                        <select class="form-control" wire:model="institucionElegida">
-                            <option value="">Seleccionar</option>
-                            @foreach ($instituciones as $institucion)
-                                <option value="{{ $institucion->id }}">{{ $institucion->nombre }}</option>
-                            @endforeach
-                        </select>
-                        @error('institucionElegida')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
+                        <label for="nameLarge" class="form-label">Descripcion</label>
+                        <textarea class="form-control" wire:model='descripcion' rose='10'
+                            placeholder="Escribir la descripcion de la institucion...">
+                        </textarea>
                     </div>
+                    @error('nombre')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
                 </div>
             </div>
             <div class="modal-footer">
